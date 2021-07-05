@@ -58,7 +58,7 @@ router.post("/", (req, res) => {
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
           return {
             product_id: product.id,
-            tag_id,
+            tagIds,
           };
         });
         return ProductTag.bulkCreate(productTagIdArr);
